@@ -1,0 +1,24 @@
+# Checkpoint - Governança em IA e Front-end (Forzy Digital Twin)
+
+## Integrantes do Grupo
+* Integrantes: 
+• Luca Tiepolo Schmidt Morete - RM560255 
+• Alexandre Ferreira - RM 565626 
+• Carlos Bucker - RM 555812 
+• Filipe Melo - RM 564571
+
+## Arquitetura do Projeto
+Este projeto consiste em uma API construída em **FastAPI** para expor os dados de sensores (leitura atual e histórico) e um Front-end em **Streamlit** para consumo desses dados. 
+
+Para atender aos requisitos de **Governança em IA**, a API possui um middleware que intercepta todas as requisições e registra metadados de observabilidade, incluindo:
+* `Timestamp` da requisição
+* `Latência` (tempo de resposta em ms)
+* Headers de contexto: `X-Session-Id` e `X-Feature`
+
+Esses dados são expostos no endpoint `/v1/observabilidade` e consumidos pela interface gráfica para auditoria de métricas.
+
+## Como rodar o projeto localmente
+
+1. **Instale as dependências:**
+   ```bash
+   pip install fastapi uvicorn streamlit requests pandas
