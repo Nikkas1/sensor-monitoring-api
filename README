@@ -18,7 +18,14 @@ Para atender aos requisitos de **Governança em IA**, a API possui um middleware
 Esses dados são expostos no endpoint `/v1/observabilidade` e consumidos pela interface gráfica para auditoria de métricas.
 
 ## Como rodar o projeto localmente
-
-1. **Instale as dependências:**
+**Instale as dependências:**
    ```bash
+
    pip install fastapi uvicorn streamlit requests pandas
+
+
+comandos
+
+python -m uvicorn api:app --reload
+
+python -m streamlit run app.py
